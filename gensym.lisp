@@ -1,6 +1,6 @@
 
 (defmacro bad-for ((var start stop) &body body)
-  "Limit not necessary but illustrative of capture"
+  "Limit is necessary to prevent mulitple evalutation"
   `(do ((,var ,start (1+ ,var))
         (limit ,stop))
        ((> ,var limit))
